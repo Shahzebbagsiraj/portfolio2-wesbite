@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Coe - My Services</title>
+    <style>
+        /* General Reset and Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            color: #333;
+        }
+
+        nav {
+            background-color: #00796b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            color: #dcdcdc;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #00796b;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            color: #004d40;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        section.skills {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #004d40;
+            margin-bottom: 10px;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            margin-bottom: 10px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .services .service-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 250px;
+        }
+
+        .services .service-details {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            min-width: 250px;
+        }
+
+        .services .service-list article {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .services .service-list article:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .services .service-list article h3 {
+            color: #00796b;
+            margin: 0;
+        }
+
+        .services .service-details div {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .services .service-details div.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+            }
+
+            .services .service-list,
+            .services .service-details {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='About.html'">About</button>
+        <button onclick="window.location.href='Services.html'">Services</button>
+        <button onclick="window.location.href='Projects.html'">Projects</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
+    </nav>
+
+    <header>
+        <h1>My Services</h1>
+        <p>-- What I Provide --</p>
+    </header>
+
+    <main>
+        <section class="services">
+            <div class="service-list">
+                <article data-target="web-development">
+                    <h3>Web Development</h3>
+                </article>
+                <article data-target="ui-ux-designing">
+                    <h3>UI/UX Designing</h3>
+                </article>
+                <article data-target="app-development">
+                    <h3>App Development</h3>
+                </article>
+                <article data-target="cyber-security">
+                    <h3>Cyber Security</h3>
+                </article>
+                <article data-target="database-management">
+                    <h3>Database Management</h3>
+                </article>
+                <article data-target="advertising">
+                    <h3>Advertising</h3>
+                </article>
+            </div>
+
+            <div class="service-details">
+                <div id="web-development">
+                    <img src="./img/web.png" alt="Web Development" height="200" width="175">
+                    <p>Specializing in creating interactive, user-friendly websites and applications that enhance user
+                        experience and functionality.</p>
+                </div>
+                <div id="ui-ux-designing">
+                    <img src="./img/uiux.png" alt="UI/UX Designing" height="200" width="175">
+                    <p>Improving usability, accessibility, and engagement to ensure better user retention and successful
+                        interactions with digital products.</p>
+                </div>
+                <div id="app-development">
+                    <img src="./img/app-settings.png" alt="App Development" height="200" width="175">
+                    <p>Developing mobile and desktop applications that meet user needs and drive engagement across
+                        various platforms.</p>
+                </div>
+                <div id="cyber-security">
+                    <img src="./img/cyber.png" alt="Cyber Security" height="200" width="175">
+                    <p>Protecting sensitive data and systems from unauthorized access and attacks to ensure security and
+                        compliance.</p>
+                </div>
+                <div id="database-management">
+                    <img src="./img/database.png" alt="Database Management" height="200" width="175">
+                    <p>Efficiently storing, managing, and retrieving vast amounts of structured data while ensuring data
+                        integrity and accessibility.</p>
+                </div>
+                <div id="advertising">
+                    <img src="./img/adverse.png" alt="Advertising" height="200" width="175">
+                    <p>Raising brand awareness, attracting potential customers, and driving sales by promoting products
+                        or services to targeted audiences.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jack Coe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle the interactivity
+        document.querySelectorAll('.service-list article').forEach(article => {
+            article.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                document.querySelectorAll('.service-details div').forEach(detail => {
+                    detail.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

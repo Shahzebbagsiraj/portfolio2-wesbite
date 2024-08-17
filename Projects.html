@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #00796b;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            color: #dcdcdc;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .project-card {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            /* Glassmorphism effect */
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-image {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            margin-right: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-details h3 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        .project-details p {
+            margin: 0;
+        }
+
+        .heading-container {
+            width: 100%;
+            background-color: #e0f7fa;
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .heading-container h1 {
+            margin: 0;
+            color: #00796b;
+            font-size: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects-container {
+                width: 90%;
+            }
+
+            .project-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project-image {
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .project-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .project-details p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav button {
+                font-size: 14px;
+                padding: 8px 16px;
+                margin: 0 5px;
+            }
+
+            .heading-container h1 {
+                font-size: 1.5rem;
+            }
+
+            .project-details h3 {
+                font-size: 1.25rem;
+            }
+
+            .project-details p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='About.html'">About</button>
+        <button onclick="window.location.href='Services.html'">Services</button>
+        <button onclick="window.location.href='Projects.html'">Projects</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
+    </nav>
+
+    <div class="heading-container">
+        <h1>Projects</h1>
+    </div>
+
+    <div class="projects-container">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./img/guidance.png" alt="Automatic Parking System">
+            </div>
+            <div class="project-details">
+                <h3>Automatic Parking System</h3>
+                <p>An advanced system designed to automate parking with real-time obstacle detection and path planning.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./img/shopping-cart.png" alt="Shopping Mart Website">
+            </div>
+            <div class="project-details">
+                <h3>Shopping Mart Website</h3>
+                <p>A user-friendly e-commerce platform for browsing and purchasing products online with integrated
+                    payment solutions.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./img/chat-bot.png" alt="ChatBot App">
+            </div>
+            <div class="project-details">
+                <h3>ChatBot App</h3>
+                <p>A conversational agent designed to assist users with inquiries and provide information through
+                    natural language processing.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./img/vr-headset_16822703.png" alt="VR Game">
+            </div>
+            <div class="project-details">
+                <h3>VR Game</h3>
+                <p>An immersive virtual reality game featuring interactive environments and engaging gameplay mechanics.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="./img/editdoc.png" alt="Document Editor">
+            </div>
+            <div class="project-details">
+                <h3>Document Editor</h3>
+                <p>A collaborative document editor allowing real-time editing and version control for enhanced
+                    productivity.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

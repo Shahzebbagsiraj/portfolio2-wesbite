@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jack Coe - Software Developer</title>
+
+    <style>
+        /* Apply a global font and reset margin and padding */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #e0f7fa;
+            /* Light blue background */
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            /* Semi-transparent background for glassmorphism */
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+            /* Glassmorphism effect */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            /* Border to enhance the glass effect */
+        }
+
+        /* Header text styling */
+        header h1 {
+            font-size: 3rem;
+            color: #00796b;
+            /* Teal color */
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        header h2 {
+            font-size: 1.75rem;
+            color: #004d40;
+            /* Darker teal color */
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        /* Main section styling */
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.3);
+            /* Semi-transparent background for glassmorphism */
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            /* Border to enhance the glass effect */
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            /* Lift effect on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow on hover */
+        }
+
+        /* Section heading styling */
+        section h3 {
+            font-size: 2rem;
+            color: #004d40;
+            /* Darker teal color */
+            margin-bottom: 1rem;
+        }
+
+        /* Paragraph styling */
+        section p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header h2 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 1rem;
+            }
+
+            section h3 {
+                font-size: 1.75rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h2 {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: 0.75rem;
+            }
+
+            section h3 {
+                font-size: 1.5rem;
+            }
+
+            section p {
+                font-size: 0.9rem;
+            }
+
+            main {
+                padding: 1rem;
+                gap: 1rem;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4a90e2, #0056b3);
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            color: #dcdcdc;
+        }
+
+        @media (max-width: 480px) {
+            nav button {
+                font-size: 14px;
+                padding: 8px 16px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='About.html'">About</button>
+        <button onclick="window.location.href='Services.html'">Services</button>
+        <button onclick="window.location.href='Projects.html'">Projects</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
+    </nav>
+    <header>
+        <h1>Hello, I am Jack Coe</h1>
+        <h2>A Software Developer</h2>
+    </header>
+
+    <main>
+        <section>
+            <h3>About My Profession</h3>
+            <p>A software developer is a professional who designs, codes, and tests software applications to meet user
+                needs and business requirements. They are skilled in programming languages and frameworks, allowing them
+                to create software solutions ranging from mobile apps to complex systems. Their role involves
+                problem-solving, debugging, and continuously learning new technologies to stay current in the
+                fast-evolving tech industry. Collaboration with other developers, designers, and stakeholders is crucial
+                to delivering high-quality, functional software.</p>
+        </section>
+
+        <section>
+            <h3>Life Of A Developer</h3>
+            <p>In today's world, developers work in dynamic, collaborative environments, often using agile methodologies
+                to quickly adapt to changing requirements. They leverage tools like version control, cloud platforms,
+                and CI/CD pipelines to streamline development and deployment. Constantly learning and adapting to new
+                technologies, they focus on delivering efficient, user-centric software solutions.</p>
+        </section>
+    </main>
+</body>
+
+</html>
